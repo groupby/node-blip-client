@@ -1,0 +1,45 @@
+{
+  "name": "blip-client",
+  "version": "0.0.1",
+  "description": "Send your blips. Send them.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test",
+    "coverage:codacy": "cat ./coverage/lcov.info | codacy-coverage",
+    "lint": "gulp lint",
+    "license": "node licenseChecker.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/groupby/node-blip-client.git"
+  },
+  "precommit": [
+    "lint",
+    "license"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/groupby/node-blip-client/issues"
+  },
+  "homepage": "https://github.com/groupby/node-blip-client#readme",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "bunyan": "^1.8.3",
+    "bunyan-prettystream": "^0.1.3",
+    "http-status": "^0.2.3",
+    "lodash": "^4.16.4",
+    "request": "^2.75.0",
+    "schema-inspector": "^1.6.6"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gb-license-check": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-if": "^2.0.1",
+    "gulp-istanbul": "^1.1.1",
+    "gulp-mocha": "^3.0.1",
+    "mocha": "^3.1.2"
+  }
+}
