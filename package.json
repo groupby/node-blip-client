@@ -4,7 +4,7 @@
   "description": "Send your blips. Send them.",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test",
+    "test": "./node_modules/.bin/gulp test",
     "coverage:codacy": "cat ./coverage/lcov.info | codacy-coverage",
     "lint": "gulp lint",
     "license": "node licenseChecker.js"
