@@ -8,9 +8,6 @@ inputs:
   - name: node-blip-client
     path: .
 
-outputs:
-  - name: node_modules
-
 run:
   path: npm
   args: [ install ]

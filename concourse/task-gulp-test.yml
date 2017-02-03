@@ -5,7 +5,7 @@ image_resource:
   source: {repository: node, tag: "7"}
 
 inputs:
-  - name: node_modules
+  - name: node-blip-client
     path: .
 
 run:
