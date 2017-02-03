@@ -6,7 +6,8 @@ image_resource:
 
 inputs:
   - name: node-blip-client
-  
+    path: .
+
 outputs:
   - name: node_modules
 
