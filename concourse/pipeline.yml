@@ -8,6 +8,7 @@ jobs:
   - name: test
     plan:
       - get: node-blip-client
+        trigger: true
       - task: install
         file: node-blip-client/concourse/task-npm-install.yml
       - task: test
