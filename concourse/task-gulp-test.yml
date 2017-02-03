@@ -10,4 +10,4 @@ inputs:
 
 run:
   path: ls
-  args: [ -al, node_modules ]
+  args: [ -al ]
