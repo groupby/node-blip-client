@@ -8,6 +8,8 @@ inputs:
   - name: node-blip-client
 
 run:
-  path: gulp
+  path: npm
   args:
-  - test
+  - install
+    -g
+    gulp-cli

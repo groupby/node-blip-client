@@ -8,11 +8,9 @@ inputs:
   - name: node-blip-client
 
 run:
-  path: bash
+  path: npm
   args:
-  - -exec
-  - npm
-    install
+  - install
     &&
     npm
     install
