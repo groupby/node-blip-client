@@ -4,7 +4,6 @@ resources:
     source:
       uri: https://www.github.com/groupby/node-blip-client.git
       branch: concourse
-
 jobs:
   - name: test
     plan:
