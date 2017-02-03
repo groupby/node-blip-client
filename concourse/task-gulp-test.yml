@@ -6,8 +6,8 @@ image_resource:
 
 inputs:
   - name: node-blip-client
+  - name: node_modules
 
 run:
   path: gulp
-  args:
-  - test
+  args: [ test ]

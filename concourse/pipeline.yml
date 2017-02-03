@@ -10,5 +10,7 @@ jobs:
       - get: node-blip-client
       - task: install
         file: node-blip-client/concourse/task-npm-install.yml
+      - task: install
+        file: node-blip-client/concourse/task-npm-install-gulp.yml
       - task: test
         file: node-blip-client/concourse/task-gulp-test.yml

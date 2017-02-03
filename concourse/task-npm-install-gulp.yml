@@ -9,7 +9,4 @@ inputs:
 
 run:
   path: npm
-  args:
-  - install
-    -g
-    gulp-cli
+  args: [ install, -g, gulp-cli ]

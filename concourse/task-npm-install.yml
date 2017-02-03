@@ -6,13 +6,11 @@ image_resource:
 
 inputs:
   - name: node-blip-client
+  
+outputs:
+  - name: node_modules
 
 run:
   path: npm
-  args:
-  - install
-    &&
-    npm
-    install
-    -g
-    gulp-cli
+  args: [ install ]
+
