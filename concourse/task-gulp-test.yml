@@ -9,5 +9,5 @@ inputs:
   - name: node_modules
 
 run:
-  path: ./node_modules/.bin/gulp
+  path: ./node-blip-client/node_modules/.bin/gulp
   args: [ test ]
