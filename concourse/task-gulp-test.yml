@@ -5,8 +5,8 @@ image_resource:
   source: {repository: node, tag: "7"}
 
 inputs:
-  - name: node_modules
+  - name: installed
 
 run:
-  path: ls
-  args: [ -al ]
+  path: bash
+  args: [ -c, 'cd installed && npm run test' ]

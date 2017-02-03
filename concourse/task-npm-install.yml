@@ -8,9 +8,9 @@ inputs:
   - name: node-blip-client
 
 outputs:
-  - name: node_modules
+  - name: installed
 
 run:
-  path: npm
-  args: [ install ]
+  path: bash
+  args: [ -c, 'cd node-blip-client && npm install' ]
 
