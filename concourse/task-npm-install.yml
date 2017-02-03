@@ -17,4 +17,4 @@ run:
     npm
     install
     -g
-    gulp
+    gulp-cli
