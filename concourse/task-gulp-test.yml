@@ -6,7 +6,6 @@ image_resource:
 
 inputs:
   - name: node_modules
-    path: .
 
 run:
   path: ls
