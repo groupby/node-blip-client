@@ -9,5 +9,5 @@ inputs:
   - name: node_modules
 
 run:
-  path: gulp
+  path: ./node_modules/.bin/gulp
   args: [ test ]
