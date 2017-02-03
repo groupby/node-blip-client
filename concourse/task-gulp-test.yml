@@ -9,4 +9,4 @@ inputs:
 
 run:
   path: bash
-  args: [ -c, 'cd installed && npm run test' ]
+  args: [ -c, 'cd ../ && ls -al' ]
