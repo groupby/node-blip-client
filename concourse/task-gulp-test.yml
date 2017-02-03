@@ -1,0 +1,15 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: node, tag: "7"}
+
+inputs:
+  - name: node-blip-client
+
+run:
+  path: bash
+  args:
+  - -exec
+  - gulp
+    test
