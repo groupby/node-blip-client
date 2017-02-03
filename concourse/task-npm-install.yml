@@ -8,7 +8,7 @@ inputs:
   - name: node-blip-client
     path: .
 
-output:
+outputs:
   - name: node_modules
 
 run:
