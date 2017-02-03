@@ -1,0 +1,13 @@
+resources:
+  - name: node-blip-client
+    type: git
+    source:
+      uri: https://www.github.com/groupby/node-blip-client.git
+      branch: concourse
+
+jobs:
+  - name: test
+    plan:
+      - get: node-blip-client
+      - task: unit
+        file: node-blip-client/concourse/test-task.yml
