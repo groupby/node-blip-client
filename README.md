@@ -1,4 +1,6 @@
 # node-blip-client
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/groupby/node-blip-client.svg)](https://greenkeeper.io/)
 Send your blips. Send them.
 
 ## Install
