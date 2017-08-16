@@ -52,23 +52,6 @@ describe('Blip Client Tests', () => {
     });
   });
 
-  it('throw error when provided with malformed test date', (done) => {
-    const testDate   = 'badDate';
-    const blipClient = blip.createClient('http://testuri', 80, 'testService', 'testEnvironment');
-
-    blipClient.blipResponseBody = () => {
-      done('blipResponseBody should not have been called');
-    };
-
-    expect(() => {
-      blipClient.write({
-        data: 'testData',
-        date: testDate
-      });
-    }).to.throw();
-    done();
-  });
-
   it('should use given date if provided', (done) => {
     const testDate              = '2016-07-05T00:00:00-00:00';
     const blipClient            = blip.createClient('http://testuri', 80, 'testService', 'testEnvironment');
@@ -87,9 +70,25 @@ describe('Blip Client Tests', () => {
   it('should put date in ISO 8601 if none provided', (done) => {
     const blipClient            = blip.createClient('http://testuri', 80, 'testService', 'testEnvironment');
     blipClient.blipResponseBody = (requestObject) => {
-      expect(requestObject.body.date).to.match(/^(\d{4})-(0[1-9]|1[0-2]|[1-9])-(\3([12]\d|0[1-9]|3[01])|[1-9])[tT\s]([01]\d|2[0-3])\:(([0-5]\d)|\d)\:(([0-5]\d)|\d)([\.,]\d+)?([zZ]|([\+-])([01]\d|2[0-3]|\d):(([0-5]\d)|\d))$/);
+      expect(requestObject.body.date).to.match(/^(\d{4})-(0[1-9]|1[0-2]|[1-9])-(\3([12]\d|0[1-9]|3[01])|[1-9])[tT\s]([01]\d|2[0-3]):(([0-5]\d)|\d):(([0-5]\d)|\d)([.,]\d+)?([zZ]|([+-])([01]\d|2[0-3]|\d):(([0-5]\d)|\d))$/);
       done();
     };
+    blipClient.write({data: 'testData'});
+  });
+
+  it('should log errors and not throw', () => {
+    const blipClient            = blip.createClient('http://testuri', 80, 'testService', 'testEnvironment');
+
+    blipClient.blipResponseBody = () => {
+      throw new Error('boom'); 
+    };
+    blipClient.write({data: 'testData'});
+  });
+
+  it('should log errors and not reject', () => {
+    const blipClient            = blip.createClient('http://testuri', 80, 'testService', 'testEnvironment');
+
+    blipClient.blipResponseBody = () => Promise.reject(new Error('boon'));
     blipClient.write({data: 'testData'});
   });
 
