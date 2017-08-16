@@ -1,6 +1,6 @@
 {
   "name": "blip-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Send your blips. Send them.",
   "main": "index.js",
   "scripts": {
