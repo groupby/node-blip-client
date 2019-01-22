@@ -1,7 +1,7 @@
 
 declare module 'blip-client' {
   export interface IBlipClient {
-    write(data: { date: string; } & Record<string, any>): Promise<any>;
+    write(data: Record<string, any>): Promise<any>;
   }
 
   export function createClient(
