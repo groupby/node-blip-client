@@ -23,6 +23,7 @@
     "url": "https://github.com/groupby/node-blip-client/issues"
   },
   "homepage": "https://github.com/groupby/node-blip-client#readme",
+  "typings": "./blip-client.d.ts",
   "dependencies": {
     "bluebird": "^3.4.6",
     "bunyan": "^1.8.3",
